@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     # apps project
     'core',
+    'portfolio',
 ]
 
 MIDDLEWARE = [
