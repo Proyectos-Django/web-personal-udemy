@@ -43,15 +43,6 @@ def about(request):
     # """)
     return render(request, "core/about.html")
 
-def portfolio(request):
-    #=======================================================    
-    # return HttpResponse(html_base + """
-    #     <h2>Portafolio</h2>
-    #     <p>Alguno de mis trabajos</p>
-    # """)
-    return render(request, "core/portfolio.html")
-
-
 def contact(request):
     #===============================================================================================================
     # return HttpResponse(html_base + """

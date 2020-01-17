@@ -13,6 +13,26 @@
 {% endblock %}
 
 {% block content %}
+<!-- ============================================================================================= 
+{{projects}}
+INYECTANDO PROYECTO DESDE BASE DE DATOS  -->
+
+    {% for project in projects %}
+        <div class="row project">  	
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+                <img class="img-fluid" src="{{project.image.url}}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading title">{{project.title}}</h2>   
+            <p>{{project.description}}</p>
+            {% if project.link %}
+                <p><a href="{{ project.link }}">Más información</a></p>
+            {% endif %}    
+        </div>
+        </div>
+    {% endfor %}
+
+
 <!-- Proyecto -->
 <div class="row project">  	
 <div class="col-lg-3 col-md-4 offset-lg-1">
