@@ -23,3 +23,21 @@ conda install pylint => comprobador de sintaxis
 
 =============================================================================
 python manage.py startapp core
+
+=============================================================================
+crear directorio media en la raiz del proyecto para guradar las imagenes
+
+# Media Files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+
+configurar en el campo del modelo 
+image = models.ImageField(verbose_name="Imagen", upload_to="projects")
+
+============================================================================================
+configuracion para visualizacion de imagen si DEBUG esta en true en urls.py de proyecto raiz
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
